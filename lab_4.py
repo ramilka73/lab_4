@@ -1,11 +1,9 @@
 import random
 
-
 # Генератор квадратной матрицы заданной размерности
 def generate_matrix(n):
     arr = [[random.randint(-10, 10) for j in range(n)] for i in range(n)]
     return arr
-
 
 # Вывод матрицы на экран
 def print_matrix(arr):
@@ -15,7 +13,6 @@ def print_matrix(arr):
         print()
     print()
 
-
 # Копирование матрицы
 def copy_matrix(arr):
     n = len(arr)
@@ -24,7 +21,6 @@ def copy_matrix(arr):
         for j in range(n):
             new_arr[i][j] = arr[i][j]
     return new_arr
-
 
 # Расчет первого числа из уловия задачи
 def get_first_num(arr, k):
@@ -40,7 +36,6 @@ def get_first_num(arr, k):
                     s += 1
     return s
 
-
 # Расчет второго числа из условия задачи
 def get_second_num(arr):
     n = len(arr)
@@ -54,7 +49,6 @@ def get_second_num(arr):
                 s += arr[i][j]
     return s
 
-
 # Симметрично поменять местами области 1 и 3 в заданной мтарице
 def symmetric_change_1_and_3(arr):
     n = len(arr)
@@ -65,13 +59,11 @@ def symmetric_change_1_and_3(arr):
             if b1 and b2:
                 arr[i][j], arr[n - 1 - i][j] = arr[n - 1 - i][j], arr[i][j]
 
-
 # Транспонирование матрицы
 def transpose_matrix(arr):
     n = len(arr)
     new_arr = [[arr[j][i] for j in range(n)] for i in range(n)]
     return new_arr
-
 
 # Умноение матрицы на число
 def scale_matrix(arr, k):
@@ -79,13 +71,11 @@ def scale_matrix(arr, k):
     new_arr = [[arr[i][j] * k for j in range(n)] for i in range(n)]
     return new_arr
 
-
 # Сложение двух матриц
 def add_matrices(arr1, arr2):
     n = len(arr1)
     new_arr = [[arr1[i][j] + arr2[i][j] for j in range(n)] for i in range(n)]
     return new_arr
-
 
 # Умножение двух матриц
 def multiply_matrices(arr1, arr2):
@@ -97,10 +87,7 @@ def multiply_matrices(arr1, arr2):
                 new_arr[i][j] += arr1[i][r] * arr2[r][j]
     return new_arr
 
-
-# ---------------------------------------------------------------
-#  Н А Ч А Л О     П Р О Г Р А М М Ы
-# ---------------------------------------------------------------
+#  НАЧАЛО ПРОГРАММЫ
 
 # Цикл для ввода K
 while True:
